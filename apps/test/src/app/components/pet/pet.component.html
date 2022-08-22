@@ -1,0 +1,17 @@
+<mat-card class="pet-card">
+	<div class="card-header">
+    <mat-card-header>
+				<div mat-card-avatar>
+					<span class="material-icons pet-icon">pets</span>
+				</div>
+				<mat-card-title>{{pet.name}}</mat-card-title>
+    </mat-card-header>
+		<button mat-button class="delete-button">
+			<span class="material-icons delete-icon">delete</span>
+		</button>
+	</div>
+	<mat-card-content>
+		<p class="pet-info">Edad: {{pet.age}}</p>
+		<p class="pet-info">Especie: {{pet.kind}}</p>
+	</mat-card-content>
+</mat-card>

@@ -5,9 +5,9 @@ import { ViewsRoutingModule } from './views-routing.module';
 import { PetsComponent } from './pets/pets.component';
 import { PeopleComponent } from './people/people.component';
 import { MenuComponent } from '../components/menu/menu.component';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { PersonComponent } from '../components/person/person.component';
+import { MaterialModule } from '../../material/material.module';
+import { PetComponent } from '../components/pet/pet.component';
 
 
 @NgModule({
@@ -15,12 +15,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     PeopleComponent,
     PetsComponent,
     MenuComponent,
+    PersonComponent,
+    PetComponent
   ],
   imports: [
     CommonModule,
     ViewsRoutingModule,
-    MatToolbarModule,
-    MatIconModule
+    MaterialModule
   ]
 })
 export class ViewsModule { }

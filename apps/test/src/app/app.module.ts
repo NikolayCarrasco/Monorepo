@@ -8,17 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { ViewsModule } from './views/views.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    NxWelcomeComponent
-  ],
+  declarations: [AppComponent, NxWelcomeComponent],
   imports: [
-    BrowserModule, 
-    HttpClientModule, 
+    BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    ViewsModule, 
+    ViewsModule,
     BrowserAnimationsModule,
   ],
   providers: [],

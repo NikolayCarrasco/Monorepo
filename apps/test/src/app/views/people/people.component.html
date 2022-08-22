@@ -1,2 +1,8 @@
 <project-test-menu></project-test-menu>
-<p>people works!</p>
+
+<div class="container-flow">
+    <h2 class="people-title">Dueños:</h2>
+    <div *ngFor="let person of people">
+        <project-test-person [person]="person"></project-test-person>
+    </div>
+</div>
