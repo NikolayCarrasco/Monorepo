@@ -8,6 +8,6 @@ export interface Person{
     age: number,
     address: string,
     pets: Pet[];
-    createDate: Date,
-    updateDate: Date,
+    createDate?: Date,
+    updateDate?: Date,
 }
