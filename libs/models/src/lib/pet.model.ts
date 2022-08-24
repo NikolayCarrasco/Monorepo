@@ -1,8 +1,8 @@
 export interface Pet{
     id?: string,
     name: string,
-    race: string,
+    kind: string,
     age: number,
-    createDate: Date,
-    updateDate: Date,
+    createDate?: Date,
+    updateDate?: Date,
 }
