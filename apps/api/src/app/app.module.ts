@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { PeopleModule } from './people/people.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -22,6 +21,6 @@ import { PetModule } from './pet/pet.module';
     PetModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}
