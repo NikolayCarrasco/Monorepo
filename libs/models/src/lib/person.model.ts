@@ -1,5 +1,5 @@
 export interface Person{
-    id?: string,
+    _id?: string,
     rut: string,
     name: string,
     lastName: string,

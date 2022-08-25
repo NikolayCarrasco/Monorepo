@@ -1,6 +1,11 @@
 <div class="container-flow">
-    <h2 class="people-title">Dueños:</h2>
-    <div *ngFor="let person of people">
-        <project-test-person [person]="person"></project-test-person>
-    </div>
+	<div class="title">
+		<h2 class="people-title">Personas:</h2>
+		<button mat-button class="button-refresh" (click)="refresh()">
+			<span class="material-icons icon-refresh">replay</span>
+		</button>
+	</div>
+	<div *ngFor="let person of people">
+		<project-test-person [person]="person"></project-test-person>
+	</div>
 </div>

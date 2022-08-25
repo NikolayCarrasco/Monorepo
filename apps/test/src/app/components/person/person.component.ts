@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Person } from '@project-test/models';
+import { PersonService } from '@project-test/services';
 
 @Component({
   selector: 'project-test-person',
@@ -10,7 +11,17 @@ export class PersonComponent implements OnInit {
 
   @Input() person!: Person;
 
-  constructor() {}
+  constructor(
+    private personService: PersonService
+  ) {}
 
   ngOnInit(): void {}
+
+  deletePerson(){
+    try {
+      if (this.person._id) this.personService.deletePerson(this.person._id).subscribe();
+    } catch (error) {
+      console.log('Algo ha salido mal');
+    }
+  }
 }
