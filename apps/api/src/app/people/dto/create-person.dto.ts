@@ -1,6 +1,8 @@
 export class CreatePersonDto {}
-import { IsString, IsNumber, IsInt, MaxLength } from 'class-validator';
+import { IsString, IsInt } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
+import { Pet } from '../../pet/schemas/pet.schema';
+import { isTypedArray } from 'util/types';
 
 export class CreateAppointmentDTO {
   
@@ -23,5 +25,8 @@ export class CreateAppointmentDTO {
   @IsString()
   @ApiProperty()
   readonly address: string;
+
+  @ApiProperty()
+  readonly pets: Pet[];
 
 }

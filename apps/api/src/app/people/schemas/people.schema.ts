@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
+import { Pet } from '../../pet/schemas/pet.schema';
 
 export type PeopleDocument = People & Document;
 
@@ -20,6 +21,11 @@ export class People {
 
   @Prop({ required: true })
   address: string;
+
+  @Prop(
+    { type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Pet' }],  required: false }
+  )
+  pets: Pet[];
 
 }
 
