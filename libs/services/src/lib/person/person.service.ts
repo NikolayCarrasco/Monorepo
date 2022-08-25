@@ -13,7 +13,11 @@ export class PersonService {
     private http: HttpClient
   ) { }
 
-  getAllPeople(): Observable<Person[]>{
+  getAllPeople(){
+    return this.http.get(environment.baseUrl + '/people')
+  }
+
+  /* getAllPeople(): Observable<Person[]>{
     let people: Person[] = [];
     const response = this.http.get<Person[]>(environment.baseUrl + '/people').pipe(
       map(
@@ -24,7 +28,7 @@ export class PersonService {
       res => (people = res)
     );
     return response;
-  }
+  } */
 
   deletePet(id: string): Observable<Person>{
     const response = this.http.delete<Person>(`${environment.baseUrl + '/people'}${id}`).pipe(

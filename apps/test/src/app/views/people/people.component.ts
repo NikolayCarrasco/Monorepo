@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Person } from '@project-test/models'
-import { PersonService } from '../../lib/person/person.service';
+import { PersonService } from '@project-test/services';
 @Component({
   selector: 'project-test-people',
   templateUrl: './people.component.html',
@@ -30,7 +30,7 @@ export class PeopleComponent implements OnInit {
     }
   }
 
-  async fetchGetProduct() {
+  /* async fetchGetProduct() {
     try {
       const response: any = await this.personService.getPerson(this.id).toPromise();
       this.people = response.message;
@@ -40,7 +40,7 @@ export class PeopleComponent implements OnInit {
     catch (error) {
       console.log('Algo ha salido mal');
     }
-  }
+  } */
 
   ngOnInit(): void {
     this.fetchPeople()

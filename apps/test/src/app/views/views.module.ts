@@ -8,7 +8,6 @@ import { MenuComponent } from '../components/menu/menu.component';
 import { PersonComponent } from '../components/person/person.component';
 import { MaterialModule } from '../../material/material.module';
 import { PetComponent } from '../components/pet/pet.component';
-import { ServicesModule } from '../lib/services.module';
 
 
 @NgModule({
