@@ -19,7 +19,7 @@ export class People {
   age: number;
 
   @Prop({ required: true })
-  address: number;
+  address: string;
 
 }
 
