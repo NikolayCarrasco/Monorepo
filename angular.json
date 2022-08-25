@@ -3,7 +3,8 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "api-interfaces": "libs/api-interfaces",
+    "mobile": "apps/mobile",
+    "mobile-e2e": "apps/mobile-e2e",
     "models": "libs/models",
     "services": "libs/services",
     "test": "apps/test",

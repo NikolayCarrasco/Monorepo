@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 
 export type PeopleDocument = People & Document;
 
@@ -19,7 +19,7 @@ export class People {
   age: number;
 
   @Prop({ required: true })
-  address: number;
+  address: string;
 
 }
 

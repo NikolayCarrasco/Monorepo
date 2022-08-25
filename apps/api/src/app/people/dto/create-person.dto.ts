@@ -1,5 +1,5 @@
 export class CreatePersonDto {}
-import { IsString, IsNumber, IsInt, MaxLength } from 'class-validator';
+import { IsString, IsInt } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateAppointmentDTO {

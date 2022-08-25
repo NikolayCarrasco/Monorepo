@@ -30,7 +30,7 @@ export class PersonService {
     return response;
   } */
 
-  deletePet(id: string): Observable<Person>{
+  deletePerson(id: string): Observable<Person>{
     const response = this.http.delete<Person>(`${environment.baseUrl + '/people'}${id}`).pipe(
       map(
         (data: any) => data.message
