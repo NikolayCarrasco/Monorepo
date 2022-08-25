@@ -7,7 +7,7 @@ export interface Person{
     lastName: string,
     age: number,
     address: string,
-    pets: Pet[];
+    pets?: Pet[];
     createDate?: Date,
     updateDate?: Date,
 }

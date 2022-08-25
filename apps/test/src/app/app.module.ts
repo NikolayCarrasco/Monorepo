@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ViewsModule } from './views/views.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServicesModule } from './lib/services.module';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ViewsModule,
     BrowserAnimationsModule,
+    ServicesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
