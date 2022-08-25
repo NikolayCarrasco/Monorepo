@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Person } from '@project-test/models';
 import { environment } from '../../environments/environment';
 
@@ -14,7 +14,7 @@ export class PersonService {
   ) { }
 
   getAllPeople(){
-    return this.http.get(environment.baseUrl + '/people')
+    return this.http.get(environment.baseUrl + '/people');
   }
 
   /* getAllPeople(): Observable<Person[]>{
@@ -31,11 +31,6 @@ export class PersonService {
   } */
 
   deletePerson(id: string): Observable<Person>{
-    const response = this.http.delete<Person>(`${environment.baseUrl + '/people'}${id}`).pipe(
-      map(
-        (data: any) => data.message
-      )
-    );
-    return response;
+    return this.http.delete<Person>(`${environment.baseUrl + '/people/'}${id}`);
   }
 }

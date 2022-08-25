@@ -16,18 +16,24 @@ export class PeopleComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
   ) {
     this.id = this.activatedRoute.snapshot.params['id'];
+  }
 
+  ngOnInit(): void {
+    this.fetchPeople()
   }
 
   async fetchPeople(){
     try {
       const response: any = await this.personService.getAllPeople().toPromise();
-      console.log(response)
       this.people = response
     }
     catch (error) {
       console.log('Algo ha salido mal');
     }
+  }
+
+  public refresh(){
+    this.ngOnInit();
   }
 
   /* async fetchGetProduct() {
@@ -41,8 +47,4 @@ export class PeopleComponent implements OnInit {
       console.log('Algo ha salido mal');
     }
   } */
-
-  ngOnInit(): void {
-    this.fetchPeople()
-  }
 }
