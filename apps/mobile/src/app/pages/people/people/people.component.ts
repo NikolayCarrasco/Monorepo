@@ -31,4 +31,19 @@ export class PeopleComponent implements OnInit {
       console.log('Algo ha salido mal');
     }
   }
+
+  deletePerson(id: string | undefined){
+    try {      
+      if (id) this.personService.deletePerson(id).subscribe();
+    } catch (error) {
+      console.log('Algo ha salido mal');
+    }
+  }
+
+  doRefresh(event: any) {
+    setTimeout(async () => {
+      await this.fetchPeople();
+      event.target.complete();
+    }, 2000);
+  }
 }
