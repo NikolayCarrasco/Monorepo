@@ -1,0 +1,13 @@
+{
+    "name": "mobile",
+    "devDependencies": {
+      "@capacitor/cli": "^3.5.1"
+    },
+    "cap": {
+        "executor": "@nrwl/workspace:run-commands",
+        "options": {
+          "command": "npx cap {args.command}",
+          "cwd": "apps/mobile/src"
+        }
+    }
+  }

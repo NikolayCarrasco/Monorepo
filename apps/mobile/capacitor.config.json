@@ -1,0 +1,17 @@
+{
+  "appId": "com.mobile.mobile",
+  "appName": "mobile",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+    "SplashScreen": {
+      "launchShowDuration": 10000,
+      "launchAutoHide": false
+    }
+  },
+  "cordova": {}
+}
