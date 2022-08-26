@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PeopleRoutingModule } from './people-routing.module';
-import { PeopleComponent } from './people.component';
+import { PeopleRoutingModule } from './pages-routing.module';
 import { IonicModule } from '@ionic/angular';
+import { PeopleComponent } from './people/people.component';
 
 
 @NgModule({
@@ -14,4 +14,4 @@ import { IonicModule } from '@ionic/angular';
     IonicModule
   ]
 })
-export class PeopleModule { }
+export class PagesModule { }
