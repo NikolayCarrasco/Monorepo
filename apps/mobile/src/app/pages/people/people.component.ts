@@ -20,7 +20,6 @@ export class PeopleComponent implements OnInit {
     this.fetchPeople();
   }
 
-
   async fetchPeople(){
     try {
       const response: any = await this.personService.getAllPeople().toPromise();
@@ -28,14 +27,6 @@ export class PeopleComponent implements OnInit {
       this.people = response
     }
     catch (error) {
-      console.log('Algo ha salido mal');
-    }
-  }
-
-  deletePerson(id: string | undefined){
-    try {      
-      if (id) this.personService.deletePerson(id).subscribe();
-    } catch (error) {
       console.log('Algo ha salido mal');
     }
   }
