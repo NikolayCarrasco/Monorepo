@@ -1,0 +1,17 @@
+<ion-content [fullscreen]="true">
+  <div *ngFor="let person of people">
+    <ion-list>
+      <ion-card expand="full">
+        <ion-card-header>
+          <ion-card-subtitle>Nombre Persona</ion-card-subtitle>
+          <ion-card-title class="ion-text-capitalize" size="small">{{person.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content  class="ion-text-capitalize">
+          <p>Edad: <a class="attribute">{{person.age}}</a></p>
+          <p>Direccion: <a class="attribute">{{person.address}}</a></p>
+          <p>Edad:  <a class="attribute">{{person.rut}}</a></p>
+        </ion-card-content>
+      </ion-card> 
+    </ion-list>
+  </div>
+</ion-content>
