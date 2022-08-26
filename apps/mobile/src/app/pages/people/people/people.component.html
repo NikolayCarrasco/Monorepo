@@ -1,10 +1,21 @@
+<ion-toolbar color="dark">
+  <ion-title>
+    Personas
+  </ion-title>
+</ion-toolbar>
 <ion-content [fullscreen]="true">
-  <div *ngFor="let person of people">
-    <ion-list>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <div *ngFor="let person of people">
       <ion-card expand="full">
         <ion-card-header>
-          <ion-card-subtitle>Nombre Persona</ion-card-subtitle>
-          <ion-card-title class="ion-text-capitalize" size="small">{{person.name}}</ion-card-title>
+          <div class="flex">
+            <ion-icon type="button" class="icon-person" name="person-sharp"></ion-icon>
+            <ion-card-title class="ion-text-capitalize" size="small">{{person.name}} {{person.lastName}}</ion-card-title>
+          </div>
+          <ion-icon class="icon-delete" name="trash" (click)="deletePerson(person._id)"></ion-icon>
         </ion-card-header>
         <ion-card-content  class="ion-text-capitalize">
           <p>Edad: <a class="attribute">{{person.age}}</a></p>
@@ -12,6 +23,6 @@
           <p>Edad:  <a class="attribute">{{person.rut}}</a></p>
         </ion-card-content>
       </ion-card> 
-    </ion-list>
-  </div>
+    </div>
+</ion-list>
 </ion-content>
